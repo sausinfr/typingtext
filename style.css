@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "century-gothic", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #083344;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+h1 span {
+    color: #22d3ee;
+    position: relative;
+}
+
+h1 span::before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    height: 40px;
+    width: 3px;
+    background-color: #22d3ee;
+    transform: translateY(-40%);
+    animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
